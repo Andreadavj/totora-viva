@@ -1,0 +1,170 @@
+/* frontend/src/pages/admin/AdminProducts.module.css */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+}
+
+.header p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.note {
+  background: var(--straw-pale);
+  color: var(--earth);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.1rem;
+  font-size: 0.85rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  background: var(--beige);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 0;
+}
+
+.infoHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.infoHeader h3 {
+  font-size: 1rem;
+}
+
+.category {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.badges {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.prices {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.priceItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.priceItem span {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.priceItem strong {
+  font-size: 0.95rem;
+  color: var(--green-dark);
+}
+
+.editGrid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: end;
+}
+
+.editGrid .form-group {
+  min-width: 150px;
+  margin-bottom: 0;
+}
+
+.toggles {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  height: 42px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.toggle input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--green);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 64px 1fr;
+    grid-template-areas:
+      "image header"
+      "prices prices"
+      "actions actions";
+  }
+
+  .image {
+    grid-area: image;
+    width: 64px;
+    height: 64px;
+  }
+
+  .infoHeader {
+    grid-area: header;
+  }
+
+  .prices, .editGrid {
+    grid-area: prices;
+  }
+
+  .actions {
+    grid-area: actions;
+    flex-direction: row;
+  }
+}

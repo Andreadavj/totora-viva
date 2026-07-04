@@ -1,0 +1,106 @@
+/* frontend/src/pages/admin/AdminLayout.module.css */
+.layout {
+  display: flex;
+  min-height: 100vh;
+  padding-top: var(--header-height);
+}
+
+.sidebar {
+  width: 220px;
+  background: var(--green-dark);
+  color: var(--green-mist);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  position: fixed;
+  top: var(--header-height);
+  bottom: 0;
+  left: 0;
+}
+
+.sidebarTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.navLink {
+  padding: 0.7rem 0.875rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--green-mist);
+  transition: all 0.2s ease;
+}
+
+.navLink:hover {
+  background: rgba(184, 212, 192, 0.1);
+  color: var(--cream);
+}
+
+.active {
+  background: rgba(184, 212, 192, 0.18);
+  color: var(--cream);
+}
+
+.backLink {
+  font-size: 0.8rem;
+  color: rgba(184, 212, 192, 0.6);
+  padding: 0.5rem;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: var(--green-mist);
+}
+
+.main {
+  flex: 1;
+  margin-left: 220px;
+  padding: 2rem 0;
+  background: var(--cream);
+  min-height: calc(100vh - var(--header-height));
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+    gap: 0.5rem;
+  }
+
+  .sidebarTitle {
+    display: none;
+  }
+
+  .nav {
+    flex-direction: row;
+    flex: none;
+  }
+
+  .navLink {
+    white-space: nowrap;
+  }
+
+  .backLink {
+    display: none;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,118 @@
+/* frontend/src/pages/PaymentConfirmation.module.css */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  padding-top: calc(var(--header-height) + 2rem);
+  background: var(--beige);
+}
+
+.box {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: 3rem 2.5rem;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s ease both;
+}
+
+.iconSuccess, .iconWarning, .iconError {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.iconSuccess {
+  background: var(--green-pale);
+  color: var(--green);
+}
+
+.iconWarning {
+  background: var(--straw-pale);
+  color: var(--earth);
+}
+
+.iconError {
+  background: rgba(192, 57, 43, 0.1);
+  color: #C0392B;
+}
+
+.box h1 {
+  font-size: 1.7rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.orderBox {
+  background: var(--beige);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.orderLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--earth);
+}
+
+.orderNumber {
+  font-family: var(--font-mono, monospace);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+.paymentDetails {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--green-pale);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--green-dark);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,150 @@
+/* frontend/src/pages/Auth.module.css */
+.page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+/* IMAGEN */
+.imageSide {
+  position: relative;
+  display: block;
+}
+
+.imageSide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(30,59,40,0.1) 0%, rgba(30,59,40,0.75) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 3rem;
+}
+
+.imageQuote {
+  color: var(--cream);
+}
+
+.imageQuote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.imageQuote span {
+  font-size: 0.85rem;
+  color: var(--green-mist);
+}
+
+/* FORMULARIO */
+.formSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--cream);
+}
+
+.formWrap {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.logoLink {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.9rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.switchText {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+}
+
+.switchText a {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.demoBox {
+  margin-top: 1.5rem;
+  background: var(--beige);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  text-align: center;
+}
+
+.demoTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--earth);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.15rem;
+}
+
+.demoText {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono, monospace);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .imageSide {
+    display: none;
+  }
+
+  .formSide {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

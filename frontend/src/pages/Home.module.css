@@ -1,0 +1,284 @@
+/* frontend/src/pages/Home.module.css */
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(30, 59, 40, 0.88) 0%,
+    rgba(30, 59, 40, 0.55) 50%,
+    rgba(30, 59, 40, 0.35) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  padding-top: var(--header-height);
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.heroBadge {
+  background: rgba(196, 160, 85, 0.2);
+  color: var(--straw-light);
+  border: 1px solid rgba(196, 160, 85, 0.4);
+  width: fit-content;
+}
+
+.heroTitle {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  color: var(--cream);
+  line-height: 1.15;
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: var(--straw-light);
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: var(--green-mist);
+  max-width: 540px;
+  line-height: 1.7;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.heroSecondaryBtn {
+  background: rgba(255,255,255,0.08);
+  color: var(--cream);
+  border: 1.5px solid rgba(255,255,255,0.35);
+}
+
+.heroSecondaryBtn:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: var(--cream);
+}
+
+.scrollHint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--cream);
+  opacity: 0.7;
+  animation: bounce 2s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 8px); }
+}
+
+/* ===== VALORES ===== */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.valueCard {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--green-mist);
+}
+
+.valueIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.valueCard h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.valueCard p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ===== HISTORIA ===== */
+.storySection {
+  background: var(--beige);
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.storyImageWrap {
+  position: relative;
+}
+
+.storyImage {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  aspect-ratio: 7/8;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+.storyImageAccent {
+  position: absolute;
+  top: -1.5rem;
+  right: -1.5rem;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--straw);
+  border-radius: var(--radius-xl);
+  z-index: 1;
+}
+
+.storyContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.storyTitle {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  line-height: 1.25;
+}
+
+.storyText {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* ===== TERMICO STATS ===== */
+.thermalSection {
+  background: var(--green-dark);
+  padding: 3.5rem 0;
+}
+
+.thermalGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.thermalStat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.thermalNumber {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--straw-light);
+}
+
+.thermalLabel {
+  font-size: 0.85rem;
+  color: var(--green-mist);
+  line-height: 1.4;
+}
+
+/* ===== CTA FINAL ===== */
+.ctaSection {
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ctaTitle {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+}
+
+.ctaText {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .storyImageWrap {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .thermalGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 100vh;
+  }
+
+  .heroActions {
+    flex-direction: column;
+  }
+
+  .heroActions a {
+    width: 100%;
+    text-align: center;
+  }
+}

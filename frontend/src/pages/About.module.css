@@ -1,0 +1,172 @@
+/* frontend/src/pages/About.module.css */
+.page {
+  padding-top: var(--header-height);
+}
+
+.hero {
+  padding: 4rem 0 3rem;
+  background: var(--beige);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-top: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 560px;
+}
+
+/* HISTORIA */
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.storyText h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 1.25rem;
+}
+
+.storyText p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.storyImages {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1rem;
+  align-items: end;
+}
+
+.imgLarge {
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
+.imgSmall {
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+/* PROCESO */
+.processSection {
+  background: var(--beige);
+}
+
+.processSteps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.processStep {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  border: 1px solid var(--border-light);
+}
+
+.stepNumber {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--green-mist);
+  margin-bottom: 0.75rem;
+}
+
+.processStep h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.processStep p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* MISION */
+.missionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.missionCard {
+  text-align: center;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.missionCard:hover {
+  border-color: var(--green-mist);
+  box-shadow: var(--shadow-md);
+}
+
+.missionIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.missionCard h3 {
+  margin-bottom: 0.6rem;
+}
+
+.missionCard p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* CTA */
+.cta {
+  background: var(--green-pale);
+}
+
+.ctaTitle {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  margin-bottom: 0.75rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .processSteps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .missionGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .processSteps {
+    grid-template-columns: 1fr;
+  }
+
+  .storyImages {
+    grid-template-columns: 1fr;
+  }
+
+  .imgSmall {
+    margin-bottom: 0;
+  }
+}
